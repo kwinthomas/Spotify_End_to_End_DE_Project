@@ -11,8 +11,11 @@
 		"adls_ls_properties_typeProperties_url": {
 			"value": "https://spotifydeprojectadls.dfs.core.windows.net/"
 		},
-		"git_ls_properties_typeProperties_url": {
+		"git_big_file_ls_properties_typeProperties_url": {
 			"value": "https://media.githubusercontent.com"
+		},
+		"git_ls_properties_typeProperties_url": {
+			"value": "https://raw.githubusercontent.com"
 		},
 		"containerUri": {
 			"value": ""

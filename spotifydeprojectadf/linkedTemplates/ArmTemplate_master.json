@@ -15,9 +15,13 @@
 			"type": "string",
 			"defaultValue": "https://spotifydeprojectadls.dfs.core.windows.net/"
 		},
-		"git_ls_properties_typeProperties_url": {
+		"git_big_file_ls_properties_typeProperties_url": {
 			"type": "string",
 			"defaultValue": "https://media.githubusercontent.com"
+		},
+		"git_ls_properties_typeProperties_url": {
+			"type": "string",
+			"defaultValue": "https://raw.githubusercontent.com"
 		},
 		"containerUri": {
 			"type": "string",
@@ -51,6 +55,9 @@
 					},
 					"adls_ls_properties_typeProperties_url": {
 						"value": "[parameters('adls_ls_properties_typeProperties_url')]"
+					},
+					"git_big_file_ls_properties_typeProperties_url": {
+						"value": "[parameters('git_big_file_ls_properties_typeProperties_url')]"
 					},
 					"git_ls_properties_typeProperties_url": {
 						"value": "[parameters('git_ls_properties_typeProperties_url')]"
