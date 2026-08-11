@@ -1,0 +1,49 @@
+version: 2
+
+models:
+  - name: mart_track_features
+    description: >
+      Analytics-ready track features serving the Power BI dashboard.
+      Grain - one row per Spotify track.
+    columns:
+      - name: track_id
+        description: Spotify track identifier.
+        tests: [unique, not_null]
+
+      - name: key_description
+        description: Musical key in standard notation.
+        tests:
+          - accepted_values:
+              values: ['C','C#','D','D#','E','F','F#','G','G#','A','A#','B','Unknown']
+
+      - name: modality_description
+        tests:
+          - accepted_values:
+              values: ['Major','Minor','Unknown']
+
+      - name: mood
+        description: Derived from valence. Happy >= 0.6, Sad <= 0.4, else Ambivalent.
+        tests:
+          - accepted_values:
+              values: ['Happy','Sad','Ambivalent']
+
+      - name: valence
+        tests:
+          - dbt_utils.accepted_range:
+              min_value: 0
+              max_value: 1
+              inclusive: true
+
+      - name: release_year
+        tests:
+          - dbt_utils.accepted_range:
+              min_value: 1900
+              max_value: 2026
+              inclusive: true
+
+      - name: duration_seconds
+        tests:
+          - not_null
+          - dbt_utils.accepted_range:
+              min_value: 1
+              inclusive: true

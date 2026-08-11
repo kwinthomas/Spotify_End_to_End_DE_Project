@@ -1,0 +1,16 @@
+version: 2
+
+sources:
+  - name: silver
+    database: spotifyproject        
+    schema: silver
+    description: Cleaned, typed track data produced by the Databricks silver notebook.
+    tables:
+      - name: tracks_features
+        description: One row per Spotify track. Grain - track id.
+        columns:
+          - name: id
+            description: Spotify track identifier. Primary key.
+            tests:
+              - unique
+              - not_null
