@@ -1,0 +1,35 @@
+{
+	"name": "csv_adls",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "adls_ls",
+			"type": "LinkedServiceReference"
+		},
+		"parameters": {
+			"p_file_name": {
+				"type": "string"
+			}
+		},
+		"annotations": [],
+		"type": "DelimitedText",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobFSLocation",
+				"fileName": {
+					"value": "@{dataset().p_file_name}.csv",
+					"type": "Expression"
+				},
+				"folderPath": {
+					"value": "staging/@{dataset().p_file_name}",
+					"type": "Expression"
+				},
+				"fileSystem": "basecontainer"
+			},
+			"columnDelimiter": ",",
+			"escapeChar": "\\",
+			"firstRowAsHeader": true,
+			"quoteChar": "\""
+		},
+		"schema": []
+	}
+}

@@ -1,0 +1,30 @@
+{
+	"name": "raw_file",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "git_big_file_ls",
+			"type": "LinkedServiceReference"
+		},
+		"parameters": {
+			"p_file_name": {
+				"type": "string"
+			}
+		},
+		"annotations": [],
+		"type": "DelimitedText",
+		"typeProperties": {
+			"location": {
+				"type": "HttpServerLocation",
+				"relativeUrl": {
+					"value": "media/kwinthomas/Spotify_End_to_End_DE_Project/refs/heads/main/Raw_Dataset/@{dataset().p_file_name}.csv",
+					"type": "Expression"
+				}
+			},
+			"columnDelimiter": ",",
+			"escapeChar": "\\",
+			"firstRowAsHeader": true,
+			"quoteChar": "\""
+		},
+		"schema": []
+	}
+}
