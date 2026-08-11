@@ -1,0 +1,21 @@
+{
+	"$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentParameters.json#",
+	"contentVersion": "1.0.0.0",
+	"parameters": {
+		"factoryName": {
+			"value": "spotifydeprojectadf"
+		},
+		"adls_ls_accountKey": {
+			"value": ""
+		},
+		"adls_ls_properties_typeProperties_url": {
+			"value": "https://spotifydeprojectadls.dfs.core.windows.net/"
+		},
+		"git_big_file_ls_properties_typeProperties_url": {
+			"value": "https://media.githubusercontent.com"
+		},
+		"git_ls_properties_typeProperties_url": {
+			"value": "https://raw.githubusercontent.com"
+		}
+	}
+}
