@@ -337,7 +337,7 @@ dbt deps && dbt debug && dbt run && dbt test
 #    Authenticate with a Databricks personal access token
 ```
 
-**On macOS**, Power BI Desktop is Windows-only. Hence I used a Windows Server VM in the
+**(For macOS users)**, Power BI Desktop is Windows-only. Hence I used a Windows Server VM in the
 same Azure subscription, accessed over RDP with folder redirection to retrieve the `.pbix`.
 
 ---
