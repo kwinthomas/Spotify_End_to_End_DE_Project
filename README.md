@@ -236,7 +236,7 @@ F.coalesce(
 `dbt/spotify_dbt/`
 
 dbt Core runs locally against a Databricks Serverless SQL Warehouse via the `dbt-databricks`
-adapter. Credentials come from an environment variable, `profiles.yml` is not committed (for obv reasones).
+adapter. Credentials come from an environment variable, `profiles.yml` is not committed (for obv reasons).
 
 **`stg_tracks`** (view) — renaming and light recasting only, no business logic.
 
