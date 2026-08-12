@@ -311,8 +311,6 @@ CALCULATE([Track Count], 'mart_track_features'[year_was_repaired] = TRUE())
 
 ## Running it yourself
 
-**Prerequisites** — Azure subscription, Python 3.9+, Git LFS installed locally if you want the source file.
-
 ```bash
 # 1. Azure resources (portal)
 #    Resource group → ADLS Gen2 with hierarchical namespace → containers
@@ -339,12 +337,8 @@ dbt deps && dbt debug && dbt run && dbt test
 #    Authenticate with a Databricks personal access token
 ```
 
-Update storage account names and warehouse HTTP paths to match your own. A
-`profiles.yml.example` is provided, the real file belongs in `~/.dbt/`.
-
-**On macOS**, Power BI Desktop is Windows-only. This project used a Windows Server VM in the
+**On macOS**, Power BI Desktop is Windows-only. Hence I used a Windows Server VM in the
 same Azure subscription, accessed over RDP with folder redirection to retrieve the `.pbix`.
-Deallocate the VM from the portal — shutting down inside Windows keeps it billing.
 
 ---
 
