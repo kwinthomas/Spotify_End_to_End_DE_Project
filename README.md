@@ -101,7 +101,7 @@ Rodolfo Figueroa, sourced from the Spotify Web API.
 
 ---
 
-## High level Repository layout (For imp files)
+## High level Repository layout (Not exhaustive)
 
 ```
 Spotify_End_to_End_DE_Project/
@@ -290,6 +290,8 @@ DIVIDE(
 Repaired Years = 
 CALCULATE([Track Count], 'mart_track_features'[year_was_repaired] = TRUE())
 ```
+
+<img width="3188" height="1802" alt="Dashboard" src="https://github.com/user-attachments/assets/ed16c4a1-5ace-4b9a-abb0-429176e28eae" />
 
 ---
 
